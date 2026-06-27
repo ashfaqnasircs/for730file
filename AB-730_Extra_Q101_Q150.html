@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AB-730 Extra Questions (Q101-Q150)</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+:root{
+  --blue:#1a6ea8;--blue-dk:#0f5a8c;--blue-lt:#e8f0fa;--blue-md:#dce8f5;
+  --green:#1e8f4b;--green-bg:#e4f2e8;--red:#c7433a;--red-bg:#fdedeb;
+  --tx:#0b1e30;--tx2:#1f3b57;--tx3:#6a8aa8;--bd:#e0eaf3;
+  --bg:#eef3f9;--wh:#fff;--pl:#f0f5fc;
+}
+body{background:var(--bg);font-family:-apple-system,'Segoe UI',Roboto,sans-serif;padding:8px;min-height:100vh;display:flex;justify-content:center;}
+.card{max-width:800px;width:100%;background:var(--wh);border-radius:22px;box-shadow:0 8px 28px rgba(0,0,0,.08);padding:18px 16px;margin:4px auto;}
+.hdr{display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:2px solid var(--bd);margin-bottom:10px;flex-wrap:wrap;gap:6px;}
+.hdr-t{font-size:1.1rem;font-weight:700;color:#0a2844;}
+.hdr-t small{font-size:.58rem;font-weight:400;color:var(--tx3);display:block;}
+.hdr-r{display:flex;gap:6px;align-items:center;flex-wrap:wrap;}
+.pill{font-size:.6rem;background:var(--blue-md);padding:2px 12px;border-radius:30px;color:#1a3d60;font-weight:600;}
+.mpill{font-size:.6rem;padding:3px 12px;border-radius:30px;font-weight:600;cursor:pointer;border:1.5px solid transparent;}
+.mpill.pm{background:#d1f0e0;color:#155724;border-color:#b2dfcc;}
+.mpill.em{background:#fff3cd;color:#856404;border-color:#ffc107;}
+.pbar{width:100%;height:4px;background:var(--bd);border-radius:4px;margin-bottom:10px;overflow:hidden;}
+.pfill{height:100%;background:var(--blue);border-radius:4px;width:1%;transition:width .35s;}
+.sbar{display:none;background:var(--pl);border-radius:10px;padding:6px 14px;margin-bottom:10px;font-size:.78rem;color:var(--tx2);text-align:center;}
+.sbar b{color:var(--blue);}
+.fbar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;}
+.ftb{border:1.5px solid var(--bd);background:var(--pl);color:var(--tx2);padding:3px 11px;border-radius:20px;font-size:.68rem;font-weight:500;cursor:pointer;touch-action:manipulation;}
+.ftb.on{background:var(--blue);border-color:var(--blue);color:#fff;}
+.qhdr{display:flex;align-items:center;gap:7px;margin-bottom:4px;flex-wrap:wrap;}
+.qnum{font-size:.82rem;font-weight:700;color:var(--blue);background:var(--blue-lt);padding:1px 13px;border-radius:30px;}
+.qtag{font-size:.62rem;color:var(--tx3);background:var(--pl);padding:1px 11px;border-radius:30px;}
+.qtext{font-size:.98rem;font-weight:500;line-height:1.7;color:var(--tx);padding:9px 0 9px 13px;border-left:4px solid var(--blue);background:#f8fbfe;border-radius:0 8px 8px 0;margin:4px 0 12px;}
+.opts{display:flex;flex-direction:column;gap:7px;margin:0 0 12px;}
+.opt{display:flex;align-items:center;gap:11px;padding:9px 13px;background:#f7faff;border:1.5px solid var(--bd);border-radius:13px;cursor:pointer;touch-action:manipulation;min-height:46px;transition:background .1s,border-color .1s;}
+.opt:active{background:var(--blue-md);}
+.opt.c-opt{background:var(--green-bg);border-color:var(--green);}
+.opt.w-opt{background:var(--red-bg);border-color:var(--red);}
+.opt input{width:19px;height:19px;accent-color:var(--blue);flex-shrink:0;cursor:pointer;}
+.opt label{font-size:.93rem;color:var(--tx2);cursor:pointer;width:100%;line-height:1.5;}
+.yn-grid{display:flex;flex-direction:column;gap:8px;background:#f8fbfe;padding:11px 13px;border-radius:13px;border:1px solid var(--bd);margin:0 0 12px;}
+.yn-row{display:flex;flex-wrap:wrap;align-items:center;gap:5px 9px;padding:5px 0;border-bottom:1px solid #eef3f9;}
+.yn-row:last-child{border-bottom:none;}
+.yn-lbl{flex:1 1 150px;font-size:.85rem;color:#1a334d;line-height:1.5;}
+.yn-btns{display:flex;gap:8px;}
+.yn-btn{display:flex;align-items:center;gap:4px;font-size:.85rem;cursor:pointer;padding:4px 9px;border-radius:8px;border:1.5px solid var(--bd);background:#fff;transition:background .1s;}
+.yn-btn:active{background:var(--blue-md);}
+.yn-btn.yc{background:var(--green-bg);border-color:var(--green);color:var(--green);font-weight:600;}
+.yn-btn.yw{background:var(--red-bg);border-color:var(--red);color:var(--red);}
+.yn-btn input{width:15px;height:15px;accent-color:var(--blue);cursor:pointer;}
+.act{display:flex;gap:8px;margin:8px 0;}
+.btn{border:none;background:var(--blue);color:#fff;font-weight:600;font-size:.92rem;padding:11px 18px;border-radius:60px;cursor:pointer;touch-action:manipulation;flex:1;text-align:center;min-height:48px;}
+.btn:active{transform:scale(.96);background:var(--blue-dk);}
+.btn.sec{background:var(--blue-md);color:#1d3f60;}
+.btn.sec:active{background:#c5d5e8;}
+.fbbox{margin:8px 0 5px;padding:11px 14px;border-radius:13px;background:#f2f7fd;border-left:5px solid var(--blue);display:none;line-height:1.65;font-size:.86rem;}
+.fbbox.ok{background:var(--green-bg);border-left-color:var(--green);}
+.fbbox.ng{background:var(--red-bg);border-left-color:var(--red);}
+.ft{font-weight:700;font-size:.92rem;margin-bottom:3px;}
+.fans{display:inline-block;background:#eef4fa;padding:2px 11px;border-radius:18px;font-size:.76rem;margin-top:5px;}
+.nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:7px;margin-top:12px;padding-top:10px;border-top:1px solid var(--bd);}
+.ctr{font-size:.8rem;font-weight:600;color:#1d3d5e;background:#e7eef6;padding:2px 13px;border-radius:40px;}
+.narr{display:flex;gap:7px;}
+.jb{background:#fff;border:1.5px solid #c7d8e9;color:#1f4a6e;padding:3px 14px;border-radius:28px;font-size:.8rem;font-weight:500;cursor:pointer;touch-action:manipulation;min-height:38px;min-width:52px;}
+.jb:active{transform:scale(.93);background:var(--blue-md);}
+.jnums{display:flex;flex-wrap:wrap;gap:4px;max-height:88px;overflow-y:auto;padding:3px 0;flex:1 1 100%;justify-content:center;scrollbar-width:thin;}
+.jn{background:#fff;border:1.5px solid #d0ddee;color:#1f4a6e;padding:0 5px;border-radius:13px;font-size:.66rem;font-weight:500;cursor:pointer;touch-action:manipulation;min-width:26px;height:26px;text-align:center;line-height:24px;}
+.jn:active{transform:scale(.9);}
+.jn.cur{background:var(--blue);border-color:var(--blue);color:#fff;}
+.jn.ac{border-color:var(--green);color:var(--green);}
+.jn.aw{border-color:var(--red);color:var(--red);}
+.results{display:none;text-align:center;padding:16px 8px;}
+.results h2{font-size:1.6rem;font-weight:700;color:#0a2844;margin-bottom:6px;}
+.scc{width:110px;height:110px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:14px auto;background:conic-gradient(var(--blue) 0%,var(--bd) 0%);}
+.scc span{font-size:1.5rem;font-weight:700;color:var(--blue);}
+.rstats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:14px 0;}
+.rstat{background:var(--pl);border-radius:12px;padding:10px 6px;text-align:center;}
+.rn{font-size:1.4rem;font-weight:700;color:var(--blue);}
+.rl{font-size:.68rem;color:var(--tx3);}
+.rstat.g .rn{color:var(--green);}
+.rstat.r .rn{color:var(--red);}
+.rbtns{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
+.rbtns .btn{min-height:42px;font-size:.88rem;}
+.rev{margin-top:10px;}
+.ri{margin-bottom:8px;border-radius:11px;overflow:hidden;border:1.5px solid var(--bd);}
+.rih{display:flex;align-items:center;gap:7px;padding:7px 11px;cursor:pointer;background:var(--pl);}
+.rin{font-size:.78rem;font-weight:700;color:var(--blue);}
+.ris{font-size:.72rem;font-weight:600;margin-left:auto;}
+.ris.c{color:var(--green);}
+.ris.w{color:var(--red);}
+.rib{display:none;padding:9px 11px;font-size:.83rem;background:#fff;}
+.riq{font-weight:500;margin-bottom:5px;color:var(--tx);}
+.riy{color:var(--red);margin-bottom:2px;}
+.ric{color:var(--green);margin-bottom:3px;}
+.rie{color:var(--tx2);font-size:.8rem;line-height:1.5;}
+.riq-short{font-size:.78rem;color:#555;flex:1;padding:0 6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.domain-badge{display:inline-block;font-size:.6rem;background:#fff3cd;color:#856404;border:1px solid #ffc107;padding:1px 10px;border-radius:20px;margin-bottom:8px;}
+@media(max-width:520px){
+  body{padding:3px;}
+  .card{padding:12px 10px;border-radius:16px;}
+  .hdr-t{font-size:.95rem;}
+  .qtext{font-size:.88rem;}
+  .opt{padding:7px 9px;min-height:38px;gap:7px;}
+  .opt label{font-size:.85rem;}
+  .btn{font-size:.82rem;padding:9px 12px;min-height:42px;}
+  .jb{font-size:.72rem;padding:2px 11px;min-height:32px;min-width:40px;}
+  .jn{font-size:.58rem;min-width:22px;height:22px;line-height:20px;}
+  .fbbox{font-size:.8rem;}
+  .rstats{gap:6px;}
+  .rn{font-size:1.2rem;}
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="hdr">
+    <div class="hdr-t">&#128216; AB-730 Extra<small>Syllabus Gap Questions &middot; Q101&ndash;Q150</small></div>
+    <div class="hdr-r">
+      <span class="pill" id="pillBadge">Q101 / 50</span>
+      <button class="mpill pm" id="modeBtn">&#9989; Practice</button>
+    </div>
+  </div>
+  <div class="pbar"><div class="pfill" id="pfill"></div></div>
+  <div class="sbar" id="sbar">Score: <b id="slive">0/0</b> &nbsp;|&nbsp; Left: <b id="sleft">50</b></div>
+  <div class="fbar" id="fbar">
+    <button class="ftb on" id="ftb-all">All (50)</button>
+    <button class="ftb" id="ftb-single">Single (36)</button>
+    <button class="ftb" id="ftb-multi">Multi (7)</button>
+    <button class="ftb" id="ftb-yn">Yes/No (7)</button>
+  </div>
+  <div id="qarea">
+    <div class="qhdr">
+      <span class="qnum" id="qnum">Q101</span>
+      <span class="qtag" id="qtag">Single</span>
+    </div>
+    <div class="qtext" id="qtext">Loading...</div>
+    <div id="optscont"></div>
+    <div class="act">
+      <button class="btn" id="submitBtn">&#10004; Submit</button>
+      <button class="btn sec" id="clearBtn">&#10005; Clear</button>
+    </div>
+    <div class="fbbox" id="fbbox">
+      <div class="ft" id="fbtitle"></div>
+      <div id="fbdesc"></div>
+    </div>
+  </div>
+  <div class="results" id="results">
+    <div style="font-size:2.2rem">&#127891;</div>
+    <h2>Complete!</h2>
+    <div class="scc" id="scc"><span id="pct">0%</span></div>
+    <div class="rstats">
+      <div class="rstat g"><div class="rn" id="rcnt">0</div><div class="rl">Correct</div></div>
+      <div class="rstat r"><div class="rn" id="rwrong">0</div><div class="rl">Wrong</div></div>
+      <div class="rstat"><div class="rn" id="rskip">0</div><div class="rl">Skipped</div></div>
+    </div>
+    <div class="rbtns">
+      <button class="btn" id="retakeBtn">&#128260; Retake</button>
+      <button class="btn sec" id="reviewBtn">&#128203; Review</button>
+    </div>
+    <div class="rev" id="revSection"></div>
+  </div>
+  <div class="nav" id="navBar">
+    <span class="ctr" id="ctr">1 / 50</span>
+    <div class="narr">
+      <button class="jb" id="prevBtn">&#9664; Prev</button>
+      <button class="jb" id="nextBtn">Next &#9654;</button>
+    </div>
+    <div class="jnums" id="jnums"></div>
+  </div>
+</div>
+<script>
+var ALL_Q = [{"id": 101, "t": "single", "q": "What is the primary architectural component that enables Microsoft 365 Copilot to understand and generate human language?", "o": ["Recurrent neural networks", "Transformer-based large language models", "Decision tree algorithms", "Rule-based expert systems"], "c": "B", "e": "Microsoft 365 Copilot is powered by transformer-based large language models (LLMs). Transformers use self-attention mechanisms to understand context and relationships in language, enabling natural language understanding and generation."}, {"id": 102, "t": "single", "q": "How does Microsoft 365 Copilot differ from traditional machine learning models?", "o": ["It requires labeled training data for each new task", "It generates new content rather than just classifying existing data", "It only works with structured data like spreadsheets", "It must be retrained every time you use a new Microsoft 365 app"], "c": "B", "e": "Generative AI, which powers Copilot, creates new content (text, images, summaries) based on patterns learned during training. Traditional ML models primarily classify, predict, or cluster existing data without generating new content."}, {"id": 103, "t": "single", "q": "You ask Microsoft 365 Copilot a question and receive a confident but factually incorrect answer. What is this phenomenon called?", "o": ["Prompt injection", "Hallucination (fabrication)", "Over-reliance", "Data leakage"], "c": "B", "e": "When a generative AI model produces content that appears plausible but is factually incorrect, it is called a hallucination or fabrication. This is a known risk of LLMs and is why human review and citation checks are important."}, {"id": 104, "t": "single", "q": "A malicious user embeds hidden instructions in a document that cause Copilot to ignore your original prompt and follow the hidden instructions instead. What risk does this represent?", "o": ["Fabrication", "Over-reliance", "Prompt injection", "Data oversharing"], "c": "C", "e": "Prompt injection is an attack where hidden or manipulated instructions in content (documents, emails, web pages) attempt to hijack the AI model's behavior. It is a critical security risk when Copilot reads external content."}, {"id": 105, "t": "yn", "q": "For each statement about responsible AI use with Microsoft 365 Copilot, select Yes if true. Otherwise No.", "y": [{"t": "You should always verify Copilot-generated facts before including them in official business reports.", "c": "Yes"}, {"t": "Copilot guarantees 100% accuracy for all responses, so no human review is needed.", "c": "No"}, {"t": "Over-reliance on Copilot without critical thinking is identified as a common AI risk.", "c": "Yes"}], "e": "Human review and verification are essential because Copilot can fabricate information. Microsoft explicitly identifies over-reliance as a common risk where users accept AI output without critical evaluation."}, {"id": 106, "t": "single", "q": "Which Microsoft principle ensures that AI systems work as intended without causing unintended harm?", "o": ["Transparency", "Reliability and safety", "Inclusiveness", "Privacy and security"], "c": "B", "e": "Microsoft's Responsible AI principle of Reliability and Safety ensures AI systems behave as designed, are resilient to manipulation, and do not cause unintended harm. All six Microsoft responsible AI principles (Fairness, Reliability & Safety, Privacy & Security, Inclusiveness, Transparency, Accountability) apply to Copilot."}, {"id": 107, "t": "multi", "q": "Which two factors determine how Microsoft 365 Copilot accesses and uses your organizational data when generating responses?", "o": ["The user's Microsoft Entra ID permissions", "The physical location of the data center", "Sensitivity labels applied to documents", "The browser used to access Copilot"], "c": "A,C", "e": "Copilot respects the user's existing Microsoft 365 permissions (via Microsoft Entra ID) and sensitivity labels. It only surfaces data the user is authorized to access, and sensitivity labels can restrict how content is used or shared in Copilot responses."}, {"id": 108, "t": "single", "q": "What is the key difference between a Copilot chat experience and a Copilot agent experience?", "o": ["Chat experiences use the internet while agents only use internal data", "Agents are configured with specific knowledge sources, instructions, and capabilities for a defined purpose", "Chat experiences are only available in Microsoft Teams", "Agents require a separate premium license beyond Microsoft 365 Copilot"], "c": "B", "e": "A Copilot agent is a customized AI experience configured with specific instructions, knowledge sources (e.g., SharePoint sites, files), and capabilities. A general chat experience is open-ended without predefined scope. Agents are purpose-built for specific business tasks."}, {"id": 109, "t": "single", "q": "Your organization wants to ensure Copilot does not access data from external websites when responding to internal business queries. What should you configure?", "o": ["Delete conversation history after each session", "Turn off web search in Copilot settings or agent configuration", "Apply a Highly Confidential sensitivity label to all documents", "Enable prompt scheduling"], "c": "B", "e": "Web search can be toggled off in Copilot settings or during agent configuration. When web search is disabled, Copilot only uses your Microsoft 365 organizational data (SharePoint, OneDrive, emails, etc.) to generate responses."}, {"id": 110, "t": "yn", "q": "For each statement about how context affects Microsoft 365 Copilot responses, select Yes if true. Otherwise No.", "y": [{"t": "Opening Copilot inside Microsoft Word gives it context about the document you are editing.", "c": "Yes"}, {"t": "Copilot in Microsoft Teams meetings can access the meeting transcript to provide summaries.", "c": "Yes"}, {"t": "Copilot always has access to all files in your organization regardless of app context.", "c": "No"}], "e": "Copilot uses the context of the app you are in (the open Word doc, the Teams meeting transcript) to improve relevance. However, it only accesses data you have permission to see, not all files across the organization."}, {"id": 111, "t": "single", "q": "Which of the following is the BEST example of an effective Copilot prompt using all four recommended components: Goal, Context, Source, and Expectations?", "o": ["Summarize this.", "Write a summary of the Q3 sales report stored in SharePoint, focusing on regional performance, in 3 bullet points for a senior leadership audience.", "Give me information about sales.", "Create a report."], "c": "B", "e": "An effective prompt includes: Goal (write a summary), Context (Q3 sales report, senior leadership audience), Source (SharePoint), and Expectations (3 bullet points, regional performance). Vague prompts produce vague results."}, {"id": 112, "t": "single", "q": "You want Copilot to generate a response in a specific tone and format every time you run a prompt. What is the BEST feature to use?", "o": ["Temporary chat", "Notebook", "Saved prompt", "Delete conversation history"], "c": "C", "e": "Saved prompts allow you to save a prompt with all its instructions, tone requirements, and format specifications, then run it repeatedly with consistent results. This is more efficient than re-typing the same prompt each time."}, {"id": 113, "t": "single", "q": "You save a prompt in Microsoft 365 Copilot. What happens when you share this saved prompt with a colleague?", "o": ["The colleague can run the prompt using their own permissions and data", "The colleague receives all your conversation history associated with the prompt", "The colleague automatically gains access to all files referenced in the prompt", "The prompt is automatically scheduled to run weekly for the colleague"], "c": "A", "e": "When you share a saved prompt, the colleague can run it with their own Microsoft 365 permissions. They access only their own authorized data \u2014 they do not inherit your file access or see your previous conversation history."}, {"id": 114, "t": "single", "q": "You want Microsoft 365 Copilot to automatically run a prompt every Monday morning to summarize last week's emails. Which feature should you use?", "o": ["Notebooks", "Prompt scheduling", "Saved prompts", "Copilot Pages"], "c": "B", "e": "Prompt scheduling allows you to configure a prompt to run automatically at specified intervals (e.g., every Monday). This enables automated recurring tasks like weekly email summaries without manual intervention."}, {"id": 115, "t": "multi", "q": "Which two actions are available when managing conversations in Microsoft 365 Copilot?", "o": ["Rename a conversation", "Export a conversation to PDF directly from Copilot", "Delete a conversation", "Pin a conversation to the Microsoft Teams sidebar permanently"], "c": "A,C", "e": "In Microsoft 365 Copilot, you can rename conversations (to organize them) and delete conversations (to remove history). Direct PDF export and permanent Teams sidebar pinning are not native Copilot conversation management features."}, {"id": 116, "t": "single", "q": "You are in a long Copilot conversation. You want to start fresh without the previous context affecting new responses. What is the BEST approach?", "o": ["Delete all your conversation history from My Account portal", "Rename the current conversation", "Start a new chat or use a temporary chat", "Add the conversation to a notebook"], "c": "C", "e": "Starting a new chat or using temporary chat clears the context window, so previous responses do not influence new ones. This is ideal when switching topics or when previous context is causing irrelevant or biased responses."}, {"id": 117, "t": "single", "q": "What is the purpose of 'grounding' in the context of Microsoft 365 Copilot prompts?", "o": ["Preventing Copilot from accessing the internet", "Connecting Copilot responses to specific, authoritative sources of data to improve accuracy", "Limiting the length of Copilot responses", "Enabling Copilot to work offline without internet"], "c": "B", "e": "Grounding means providing Copilot with specific, reliable sources (files, SharePoint pages, emails) so its responses are anchored to accurate organizational data rather than relying solely on its training data, which reduces fabrication risk."}, {"id": 118, "t": "yn", "q": "You plan to use prompt scheduling in Microsoft 365 Copilot. For each statement, select Yes if true. Otherwise No.", "y": [{"t": "You can schedule a prompt to run on a recurring basis such as daily or weekly.", "c": "Yes"}, {"t": "Scheduled prompts can reference files from your local computer hard drive.", "c": "No"}, {"t": "You can view and manage your scheduled prompts from the Copilot interface.", "c": "Yes"}], "e": "Prompt scheduling supports recurring runs using cloud-connected sources (SharePoint, OneDrive). Local hard drive files cannot be referenced as they are not accessible by the cloud service. Scheduled prompts are manageable through the Copilot interface."}, {"id": 119, "t": "single", "q": "In Microsoft 365 Copilot, what is a notebook primarily used for?", "o": ["Storing your billing and subscription information", "Organizing related Copilot conversations and shared reference materials into a single workspace", "Creating PowerPoint presentations automatically", "Scheduling recurring Copilot prompts"], "c": "B", "e": "A Copilot notebook is a persistent workspace that groups related conversations together and allows them to share the same reference materials (files, instructions). It is ideal for ongoing projects where consistency of context is important."}, {"id": 120, "t": "single", "q": "You create an agent in Microsoft 365 Copilot using the Agent Store. When should you use a template from the Agent Store instead of building an agent from scratch?", "o": ["When you need an agent with completely custom behavior not covered by any existing template", "When a pre-built template already matches your use case and saves configuration time", "When your agent needs to access databases outside Microsoft 365", "When you want the agent to be available to all Microsoft 365 users globally"], "c": "B", "e": "The Agent Store offers pre-built templates for common scenarios (customer service, HR, project management). Using a template saves significant time when your requirements align with an existing template's purpose and capabilities."}, {"id": 121, "t": "multi", "q": "Which two elements can you configure when creating a custom Microsoft 365 Copilot agent?", "o": ["Instructions that define the agent's behavior and persona", "The agent's billing cost per query", "Knowledge sources such as SharePoint sites or uploaded files", "The operating system where the agent runs"], "c": "A,C", "e": "When creating a custom agent, you configure instructions (defining the agent's purpose, tone, and behavior) and knowledge sources (SharePoint, files, websites) that the agent uses to answer queries. Billing and OS are not configurable by users."}, {"id": 122, "t": "single", "q": "You create a custom Copilot agent for your team and want team members to use it. What is the correct way to make the agent available to them?", "o": ["Email the agent's configuration file to each team member", "Share the agent through Microsoft Teams or the Agent Store within your organization", "Each team member must create their own identical agent", "Publish the agent to the public Microsoft Azure Marketplace"], "c": "B", "e": "Custom agents can be shared with specific team members via Microsoft Teams or distributed within the organization through the internal Agent Store. This gives controlled access to team members without requiring individual recreation."}, {"id": 123, "t": "single", "q": "You configure a custom Copilot agent with suggested prompts. What is the purpose of suggested prompts in an agent?", "o": ["They prevent users from typing their own questions to the agent", "They guide users on the types of questions the agent is designed to answer", "They automatically run the prompt every hour", "They replace the agent's knowledge sources"], "c": "B", "e": "Suggested prompts appear as starter options when users open an agent, helping them understand the agent's capabilities and how to interact with it effectively. Users can still type custom questions; suggested prompts are guides, not restrictions."}, {"id": 124, "t": "yn", "q": "You are configuring a Copilot agent. For each statement about agent capabilities, select Yes if true. Otherwise No.", "y": [{"t": "An agent can be configured to search a specific SharePoint site for answers.", "c": "Yes"}, {"t": "An agent automatically has access to all files across the entire Microsoft 365 tenant.", "c": "No"}, {"t": "You can define the agent's personality and response style through its instructions.", "c": "Yes"}], "e": "Agents are scoped to specific knowledge sources you define. They do not have unrestricted tenant-wide access. Instructions allow you to define tone, persona, behavior constraints, and response style."}, {"id": 125, "t": "single", "q": "What is the key benefit of using Microsoft 365 Copilot memory and instructions feature?", "o": ["It allows Copilot to access files from competitors' cloud storage", "It lets Copilot remember personal preferences and context across conversations", "It automatically deletes old conversations after 30 days", "It enables Copilot to run without an internet connection"], "c": "B", "e": "Copilot memory and instructions let you set persistent preferences (e.g., preferred language, communication style, role context) that Copilot applies across conversations, providing a more personalized and consistent experience."}, {"id": 126, "t": "single", "q": "You are in Microsoft Word with a document open. You want Copilot to generate a new section about competitor analysis based on the existing document content. Which approach is correct?", "o": ["Open Copilot in a separate browser tab and copy the document text manually", "Use Copilot in Word to prompt it with the existing document as context", "Export the document to PDF first, then upload it to Copilot", "Use the Researcher agent in Teams instead"], "c": "B", "e": "Copilot in Word has direct access to the open document as context. You can prompt it to generate new content, rewrite sections, or expand on existing content using the document as a reference without any manual copying."}, {"id": 127, "t": "multi", "q": "Which two tasks can Microsoft 365 Copilot perform in Microsoft Outlook?", "o": ["Summarize a long email thread", "Automatically unsubscribe from all mailing lists", "Draft a reply to an email in a specified tone", "Replace your email server configuration"], "c": "A,C", "e": "Copilot in Outlook can summarize long email threads to quickly catch up on conversations, and draft replies in a tone you specify (formal, concise, friendly). It does not manage server settings or perform bulk unsubscription actions."}, {"id": 128, "t": "single", "q": "You need to create a PowerPoint presentation based on an existing Word document. How can Microsoft 365 Copilot help you most efficiently?", "o": ["Manually copy each paragraph from Word into PowerPoint slides", "Use Copilot in PowerPoint to generate a presentation from the Word document", "Export the Word document as a PDF and email it to colleagues to create slides", "Use Copilot in Excel to convert the document to a table first"], "c": "B", "e": "Copilot in PowerPoint can directly generate a presentation from an existing Word document, creating slides with appropriate content, layouts, and speaker notes automatically. This moves data and insights between Microsoft 365 apps efficiently."}, {"id": 129, "t": "single", "q": "You generate a management summary using Microsoft 365 Copilot based on a 50-page project report. What should you do before sharing the summary with executives?", "o": ["Share it immediately as AI-generated content is always accurate", "Verify key facts and figures against the source document", "Delete the original report to prevent confusion", "Ask Copilot to regenerate the summary five more times"], "c": "B", "e": "Even though Copilot can efficiently summarize long documents, AI-generated summaries may omit critical details or occasionally misrepresent figures. Verifying key facts against the source before sharing with leadership is essential responsible AI practice."}, {"id": 130, "t": "single", "q": "You are using Copilot in Microsoft Teams. A colleague asks you to use Copilot to get a summary of a Teams channel discussion. Where should you access Copilot for this task?", "o": ["Open Copilot in Microsoft Word", "Use Copilot directly within the Teams channel or conversation", "Use the Copilot web app at copilot.microsoft.com", "Open Copilot in Microsoft Outlook"], "c": "B", "e": "Copilot in Teams has direct access to the Teams channel history and conversations as context. Using it within Teams provides the most relevant results because it is scoped to the channel content automatically."}, {"id": 131, "t": "single", "q": "What is Microsoft 365 Copilot Pages primarily used for?", "o": ["Scheduling recurring Copilot prompts", "Collaboratively editing and sharing AI-generated content with team members", "Managing sensitivity labels on documents", "Creating custom Copilot agents"], "c": "B", "e": "Copilot Pages is a collaborative canvas where you can move AI-generated content, edit it, and share it with colleagues for real-time collaboration. It bridges the gap between Copilot responses and team collaboration workflows."}, {"id": 132, "t": "single", "q": "You use Copilot in Microsoft Excel to analyze a sales dataset. Which of the following tasks can Copilot perform directly in Excel?", "o": ["Connect to external databases automatically", "Identify trends and generate insights from your spreadsheet data", "Replace Excel formulas entirely with AI decisions", "Export data to SAP without configuration"], "c": "B", "e": "Copilot in Excel can analyze your spreadsheet data to identify trends, suggest charts, highlight outliers, and generate natural language insights. It works with your existing Excel data \u2014 it does not replace formulas or auto-connect to external systems."}, {"id": 133, "t": "multi", "q": "Which two capabilities does Microsoft 365 Copilot provide specifically in Microsoft Teams meetings?", "o": ["Automatically add all attendees to a SharePoint group", "Summarize key discussion points during or after a meeting", "List action items and next steps from the meeting", "Change the meeting room booking for future meetings"], "c": "B,C", "e": "Copilot in Teams meetings can summarize what was discussed (key points) and identify action items and next steps from the conversation. It requires meeting transcription to be enabled. It does not manage room bookings or SharePoint group memberships."}, {"id": 134, "t": "yn", "q": "You are using Copilot in a Microsoft Teams meeting. For each statement, select Yes if true. Otherwise No.", "y": [{"t": "Copilot can provide a real-time summary of the meeting while it is still in progress.", "c": "Yes"}, {"t": "Copilot can transcribe a Teams meeting even when transcription is turned off by the organizer.", "c": "No"}, {"t": "After the meeting, you can ask Copilot to list the action items discussed.", "c": "Yes"}], "e": "Copilot in Teams meetings requires transcription to be enabled to function. With transcription on, it can summarize in real time and provide post-meeting action items. It cannot bypass organizer transcription settings."}, {"id": 135, "t": "single", "q": "You need to move insights from a Copilot-generated analysis in Microsoft Teams to a Word document for a formal report. What is the most efficient approach?", "o": ["Manually retype the analysis from Teams into Word", "Use Copilot Pages to capture the content and then copy it into Word, or use Copilot in Word referencing the same sources", "Screenshot the Teams response and insert it as an image in Word", "Create a new Teams meeting to re-discuss the analysis"], "c": "B", "e": "Copilot Pages allows you to save and edit AI-generated content collaboratively. You can then copy it into Word, or alternatively use Copilot in Word with the same source references to regenerate the analysis directly in the document context."}, {"id": 136, "t": "single", "q": "You are drafting a business email in Outlook with Copilot. You want the email to be concise and have a formal tone. What is the BEST way to instruct Copilot?", "o": ["Just click 'Draft with Copilot' and accept whatever it generates", "Specify in your prompt: 'Write a formal, concise email that...' including your specific requirements", "Use Copilot in Word first, then paste the result into Outlook", "Ask Copilot to translate the email to English first"], "c": "B", "e": "Providing clear instructions about tone (formal), length (concise), and purpose directly in your Copilot prompt produces the most relevant output. Copilot responds to explicit instructions \u2014 vague requests produce generic results."}, {"id": 137, "t": "single", "q": "You want to use Copilot to generate an image for a business presentation. Which Microsoft 365 Copilot feature enables AI image generation?", "o": ["Copilot in Excel", "Copilot image generation via Designer (formerly Bing Image Creator integration)", "Copilot in Outlook", "Copilot in OneNote"], "c": "B", "e": "Microsoft 365 Copilot integrates with Microsoft Designer (powered by DALL-E) for AI image generation. You can generate images using natural language prompts for use in presentations, documents, and other content."}, {"id": 138, "t": "single", "q": "You use the Researcher agent to gather information on a topic. What is the key difference between the Researcher agent and a standard Copilot chat?", "o": ["Researcher only searches your internal SharePoint files", "Researcher performs deep, multi-step web research and synthesizes information into comprehensive reports", "Researcher only works inside Microsoft Word", "Researcher is faster but less accurate than standard Copilot chat"], "c": "B", "e": "The Researcher agent is designed for deep research tasks, autonomously searching the web and your organizational data across multiple steps to compile comprehensive, well-structured research reports. Standard Copilot chat is more conversational and single-step."}, {"id": 139, "t": "single", "q": "You use the Analyst agent in Microsoft 365 Copilot with an Excel file containing sales data. What can the Analyst agent do that standard Copilot chat cannot?", "o": ["Read PDF files", "Perform advanced data analysis, run code, and generate charts from the data autonomously", "Connect to external APIs automatically", "Translate the Excel file to another language"], "c": "B", "e": "The Analyst agent can autonomously write and execute code (Python) to perform complex data analysis, statistical modeling, and chart generation from your data files. This goes beyond standard Copilot's ability to describe or summarize spreadsheet data."}, {"id": 140, "t": "yn", "q": "You are evaluating Microsoft 365 Copilot capabilities across different apps. For each statement, select Yes if true. Otherwise No.", "y": [{"t": "Copilot in PowerPoint can create a new presentation based on a prompt describing the desired content.", "c": "Yes"}, {"t": "Copilot in Excel can automatically send emails with analysis results to stakeholders.", "c": "No"}, {"t": "Copilot in Word can rewrite selected text in a different tone or style.", "c": "Yes"}], "e": "Copilot in PowerPoint can generate presentations from text prompts. Copilot in Word can rewrite text in different styles. However, Copilot in Excel is an analysis tool and cannot directly send emails \u2014 that would require Copilot in Outlook or Power Automate."}, {"id": 141, "t": "single", "q": "Your organization has applied a 'Confidential' sensitivity label to a document. You open the document in Word and try to use Copilot to generate content based on it. What happens?", "o": ["Copilot ignores all sensitivity labels and processes the document normally", "Copilot may restrict how it uses or shares the content based on the sensitivity label policy", "Copilot automatically removes the sensitivity label before processing", "Copilot sends the document to Microsoft for manual review"], "c": "B", "e": "Sensitivity labels configured by your IT administrator define how Copilot can use, reference, or share protected content. Depending on the policy, Copilot may restrict the content from being used in responses or shared with others \u2014 data protection governs prompt results."}, {"id": 142, "t": "single", "q": "You are using Microsoft 365 Copilot and receive a response that includes a citation link to a source document. Why is this citation important?", "o": ["It proves that Copilot's response is always 100% correct", "It allows you to verify the information and check the original source for accuracy", "It means the document will be automatically deleted after 30 days", "It grants other users access to the cited document"], "c": "B", "e": "Citations in Copilot responses allow you to trace information back to the original source document and verify accuracy. This is a critical responsible AI practice \u2014 citations support human review and help identify if Copilot has misrepresented the source."}, {"id": 143, "t": "single", "q": "What does 'Microsoft Purview' provide in the context of Microsoft 365 Copilot governance?", "o": ["It provides the large language model powering Copilot responses", "It enables organizations to apply data governance, compliance policies, and information protection to Copilot interactions", "It is the name of the Copilot mobile application", "It manages user passwords and authentication for Copilot"], "c": "B", "e": "Microsoft Purview provides data governance capabilities including sensitivity labels, data loss prevention (DLP), retention policies, and audit logs that apply to Copilot interactions, ensuring compliance with organizational and regulatory requirements."}, {"id": 144, "t": "multi", "q": "Which two actions can you take to verify the accuracy of content generated by Microsoft 365 Copilot?", "o": ["Check citations provided in the response against the original source documents", "Accept the response immediately without review since AI is reliable", "Cross-reference key facts with authoritative external sources", "Ask Copilot to confirm its own accuracy with a follow-up prompt"], "c": "A,C", "e": "Verification best practices include checking Copilot's citations against original source documents and cross-referencing with trusted external sources. Relying on Copilot to self-verify is not reliable \u2014 human review is always recommended."}, {"id": 145, "t": "single", "q": "You need to ensure that confidential business strategy information discussed in a Copilot conversation is not retained or used to train future AI models. What should you check?", "o": ["Delete the Copilot app from your device", "Review your organization's Copilot data privacy settings and Microsoft's data handling commitments", "Enable web search in Copilot", "Use only temporary chats with no file references"], "c": "B", "e": "Microsoft commits that commercial customer data (prompts and responses) is not used to train foundation models. Your organization's IT admin can configure data retention policies via Microsoft Purview. Reviewing these settings ensures your data handling meets compliance needs."}, {"id": 146, "t": "single", "q": "You want to use Copilot to help plan and track a project. Which Microsoft 365 app's Copilot integration would be MOST useful for organizing tasks and timelines?", "o": ["Copilot in Outlook", "Copilot in Microsoft Teams (with Planner integration)", "Copilot in Excel for task list analysis", "Copilot in Word for the project charter"], "c": "B", "e": "Copilot in Microsoft Teams integrates with Microsoft Planner to help organize tasks, track progress, and manage project timelines collaboratively. While other apps are useful for specific documents or analysis, Teams provides the collaborative project management context."}, {"id": 147, "t": "yn", "q": "For each statement about Microsoft 365 Copilot data privacy, select Yes if true. Otherwise No.", "y": [{"t": "Microsoft uses your organization's Copilot prompts and responses to train its foundational AI models.", "c": "No"}, {"t": "Copilot responses are generated within Microsoft's compliance boundary for commercial customers.", "c": "Yes"}, {"t": "Your Microsoft 365 permissions determine what organizational data Copilot can access on your behalf.", "c": "Yes"}], "e": "Microsoft explicitly states that commercial customer data is not used to train foundation models. Copilot operates within the Microsoft 365 compliance boundary (not sent to third parties), and it only accesses data based on the signed-in user's existing Microsoft 365 permissions."}, {"id": 148, "t": "single", "q": "You are creating an effective Copilot prompt to analyze a competitor landscape report. Which prompt is MOST likely to produce a high-quality, targeted response?", "o": ["Tell me about competitors.", "Analyze the competitor landscape report in SharePoint (link) and identify the top 3 threats to our market position. Format as a table with columns: Competitor, Threat, Recommended Response.", "Summarize things.", "What do you know about business?"], "c": "B", "e": "This prompt specifies the Goal (analyze), Source (SharePoint document), Context (market position threats), and Expectations (table format, 3 items, specific columns). All four elements of an effective prompt are present, producing structured, actionable output."}, {"id": 149, "t": "single", "q": "After using Copilot to generate a business proposal, you notice it used outdated market data from 2022. What is the BEST corrective action?", "o": ["Submit the proposal with the outdated data since Copilot was confident", "Add current market data references in your prompt and regenerate the relevant sections", "Delete the proposal and never use Copilot again", "Ask a colleague to guess the current figures"], "c": "B", "e": "You can improve Copilot responses by adding specific, current source references to your prompt (e.g., link to a current market report in SharePoint). Regenerating with updated grounding sources produces more accurate and current results."}, {"id": 150, "t": "multi", "q": "Which two statements correctly describe the Copilot experience available to users WITHOUT a Microsoft 365 Copilot license?", "o": ["They can access Copilot Chat (Basic) with limited capabilities via Microsoft Edge or Bing", "They can use the full Researcher and Analyst agents", "They can use web-grounded chat with Copilot but cannot access Microsoft 365 organizational data", "They can access all Microsoft 365 Copilot features in Word, Excel, and PowerPoint"], "c": "A,C", "e": "Without a Microsoft 365 Copilot license, users get Copilot Chat (Basic) \u2014 a web-grounded chat experience accessible via Edge/Bing. This version cannot access organizational Microsoft 365 data (SharePoint, emails, files). The Researcher/Analyst agents and in-app Copilot features (Word, Excel, PowerPoint) require the paid Copilot license."}];
+var fQ = ALL_Q.slice();
+var cur = 0, answered = false, examMode = false, examAns = {};
+
+document.getElementById("modeBtn").addEventListener("click", toggleMode);
+document.getElementById("submitBtn").addEventListener("click", doSubmit);
+document.getElementById("clearBtn").addEventListener("click", doClear);
+document.getElementById("prevBtn").addEventListener("click", function(){ go(cur - 1); });
+document.getElementById("nextBtn").addEventListener("click", function(){ go(cur + 1); });
+document.getElementById("retakeBtn").addEventListener("click", retake);
+document.getElementById("reviewBtn").addEventListener("click", doReview);
+document.getElementById("ftb-all").addEventListener("click", function(){ setFilter("all", this); });
+document.getElementById("ftb-single").addEventListener("click", function(){ setFilter("single", this); });
+document.getElementById("ftb-multi").addEventListener("click", function(){ setFilter("multi", this); });
+document.getElementById("ftb-yn").addEventListener("click", function(){ setFilter("yn", this); });
+
+function setFilter(type, btn) {
+  var btns = document.querySelectorAll(".ftb");
+  for (var i = 0; i < btns.length; i++) { btns[i].classList.remove("on"); }
+  btn.classList.add("on");
+  fQ = (type === "all") ? ALL_Q.slice() : ALL_Q.filter(function(q){ return q.t === type; });
+  cur = 0; examAns = {};
+  buildJumps(); render(); updateSbar();
+}
+
+function toggleMode() {
+  examMode = !examMode;
+  var btn = document.getElementById("modeBtn");
+  btn.textContent = examMode ? "Exam Mode" : "Practice";
+  btn.className = "mpill " + (examMode ? "em" : "pm");
+  document.getElementById("sbar").style.display = examMode ? "block" : "none";
+  examAns = {}; cur = 0;
+  buildJumps(); render(); updateSbar();
+}
+
+function buildJumps() {
+  var c = document.getElementById("jnums");
+  c.innerHTML = "";
+  for (var i = 0; i < fQ.length; i++) {
+    (function(idx) {
+      var b = document.createElement("button");
+      b.className = "jn"; b.textContent = fQ[idx].id; b.id = "jn" + idx;
+      b.addEventListener("click", function(){ go(idx); });
+      c.appendChild(b);
+    })(i);
+  }
+  refreshJumps();
+}
+
+function refreshJumps() {
+  for (var i = 0; i < fQ.length; i++) {
+    var b = document.getElementById("jn" + i); if (!b) continue;
+    var cls = "jn"; if (i === cur) cls += " cur";
+    var qa = examAns[fQ[i].id];
+    if (qa) cls += qa.ok ? " ac" : " aw";
+    b.className = cls;
+  }
+}
+
+function render() {
+  var q = fQ[cur]; if (!q) return;
+  document.getElementById("qnum").textContent = "Q" + q.id;
+  document.getElementById("qtext").textContent = q.q;
+  document.getElementById("ctr").textContent = (cur + 1) + " / " + fQ.length;
+  document.getElementById("pillBadge").textContent = "Q" + q.id + " / " + fQ.length;
+  document.getElementById("pfill").style.width = ((cur + 1) / fQ.length * 100) + "%";
+  var tags = { single: "Single Choice", multi: "Multi Select", yn: "Yes / No" };
+  document.getElementById("qtag").textContent = tags[q.t] || "";
+  var oc = document.getElementById("optscont"); oc.innerHTML = "";
+  var fb = document.getElementById("fbbox"); fb.style.display = "none"; fb.className = "fbbox";
+  answered = false;
+  if (q.t === "yn") { renderYN(q, oc); } else { renderOpts(q, oc); }
+  if (examMode && examAns[q.id]) {
+    var prev = examAns[q.id];
+    if (q.t === "yn") {
+      for (var i = 0; i < prev.sel.length; i++) {
+        var r = document.querySelector("input[name=yn_" + cur + "_" + i + "][value=" + prev.sel[i] + "]");
+        if (r) r.checked = true;
+      }
+    } else {
+      for (var j = 0; j < prev.sel.length; j++) {
+        var inp = document.querySelector("input[name=qopt][value=" + prev.sel[j] + "]");
+        if (inp) inp.checked = true;
+      }
+    }
+  }
+  refreshJumps(); window.scrollTo(0, 0);
+}
+
+function renderOpts(q, container) {
+  var isMulti = q.t === "multi";
+  var wrap = document.createElement("div"); wrap.className = "opts";
+  var letters = ["A","B","C","D","E","F","G"];
+  for (var i = 0; i < q.o.length; i++) {
+    var letter = letters[i];
+    var div = document.createElement("div"); div.className = "opt";
+    var inp = document.createElement("input");
+    inp.type = isMulti ? "checkbox" : "radio"; inp.name = "qopt"; inp.value = letter; inp.id = "op_" + letter;
+    var lbl = document.createElement("label"); lbl.htmlFor = "op_" + letter; lbl.textContent = q.o[i];
+    div.appendChild(inp); div.appendChild(lbl); wrap.appendChild(div);
+    (function(d, ip, im) {
+      d.addEventListener("click", function(e) {
+        if (e.target.tagName !== "INPUT") { if (im) { ip.checked = !ip.checked; } else { ip.checked = true; } }
+      });
+    })(div, inp, isMulti);
+  }
+  container.appendChild(wrap);
+}
+
+function renderYN(q, container) {
+  var grid = document.createElement("div"); grid.className = "yn-grid";
+  for (var i = 0; i < q.y.length; i++) {
+    var row = document.createElement("div"); row.className = "yn-row";
+    var lbl = document.createElement("span"); lbl.className = "yn-lbl";
+    lbl.textContent = (i + 1) + ". " + q.y[i].t;
+    var btns = document.createElement("div"); btns.className = "yn-btns";
+    var vals = ["Yes", "No"];
+    for (var j = 0; j < vals.length; j++) {
+      var label = document.createElement("label"); label.className = "yn-btn";
+      var radio = document.createElement("input");
+      radio.type = "radio"; radio.name = "yn_" + cur + "_" + i; radio.value = vals[j];
+      label.appendChild(radio); label.appendChild(document.createTextNode(" " + vals[j]));
+      btns.appendChild(label);
+    }
+    row.appendChild(lbl); row.appendChild(btns); grid.appendChild(row);
+  }
+  container.appendChild(grid);
+}
+
+function getSel() {
+  var q = fQ[cur];
+  if (q.t === "yn") {
+    var res = [];
+    for (var i = 0; i < q.y.length; i++) {
+      var checked = null;
+      var radios = document.querySelectorAll("input[name=yn_" + cur + "_" + i + "]");
+      for (var j = 0; j < radios.length; j++) { if (radios[j].checked) checked = radios[j].value; }
+      res.push(checked);
+    }
+    return res;
+  } else {
+    var sel = [];
+    var inputs = document.querySelectorAll("input[name=qopt]");
+    for (var k = 0; k < inputs.length; k++) { if (inputs[k].checked) sel.push(inputs[k].value); }
+    return sel;
+  }
+}
+
+function isCorrect(q, sel) {
+  if (q.t === "yn") {
+    for (var i = 0; i < q.y.length; i++) { if (sel[i] !== q.y[i].c) return false; }
+    return true;
+  }
+  return sel.slice().sort().join(",") === q.c.split(",").sort().join(",");
+}
+
+function doSubmit() {
+  var q = fQ[cur]; var sel = getSel();
+  if (q.t === "yn") {
+    for (var i = 0; i < sel.length; i++) { if (!sel[i]) { alert("Please select Yes or No for statement " + (i + 1) + "."); return; } }
+  } else { if (!sel.length) { alert("Please select an option."); return; } }
+  var ok = isCorrect(q, sel);
+  if (examMode) { examAns[q.id] = { sel: sel, ok: ok }; updateSbar(); }
+  answered = true;
+  showFeedback(q, ok);
+  if (q.t === "yn") { hlYN(q, sel); } else { hlOpts(q, sel); }
+  refreshJumps();
+  if (examMode) {
+    if (cur < fQ.length - 1) { setTimeout(function(){ go(cur + 1); }, 1700); }
+    else if (Object.keys(examAns).length === fQ.length) { setTimeout(showResults, 2500); }
+  }
+}
+
+function showFeedback(q, ok) {
+  var fb = document.getElementById("fbbox"); fb.style.display = "block";
+  fb.className = "fbbox " + (ok ? "ok" : "ng");
+  document.getElementById("fbtitle").textContent = ok ? "Correct!" : "Incorrect";
+  var ans = "";
+  if (q.t === "yn") { var parts = []; for (var i = 0; i < q.y.length; i++) { parts.push((i+1) + ": " + q.y[i].c); } ans = parts.join(" | "); }
+  else { ans = q.c; }
+  var desc = document.getElementById("fbdesc"); desc.innerHTML = "";
+  var strong = document.createElement("strong"); strong.textContent = "Explanation: ";
+  var br = document.createElement("br");
+  var badge = document.createElement("span"); badge.className = "fans"; badge.textContent = "Answer: " + ans;
+  desc.appendChild(strong); desc.appendChild(document.createTextNode(q.e)); desc.appendChild(br); desc.appendChild(badge);
+}
+
+function hlOpts(q, sel) {
+  var divs = document.querySelectorAll(".opt"); var letters = ["A","B","C","D","E","F","G"];
+  var corrArr = q.c.split(",");
+  for (var i = 0; i < divs.length; i++) {
+    var letter = letters[i];
+    if (corrArr.indexOf(letter) >= 0) { divs[i].classList.add("c-opt"); }
+    else if (sel.indexOf(letter) >= 0) { divs[i].classList.add("w-opt"); }
+  }
+}
+
+function hlYN(q, sel) {
+  for (var i = 0; i < q.y.length; i++) {
+    var radios = document.querySelectorAll("input[name=yn_" + cur + "_" + i + "]");
+    for (var j = 0; j < radios.length; j++) {
+      var lbl = radios[j].parentElement;
+      if (radios[j].value === q.y[i].c) { lbl.classList.add("yc"); }
+      else if (radios[j].checked) { lbl.classList.add("yw"); }
+    }
+  }
+}
+
+function doClear() {
+  var q = fQ[cur];
+  if (q.t === "yn") {
+    for (var i = 0; i < q.y.length; i++) {
+      var radios = document.querySelectorAll("input[name=yn_" + cur + "_" + i + "]");
+      for (var j = 0; j < radios.length; j++) { radios[j].checked = false; }
+    }
+  } else { var inputs = document.querySelectorAll("input[name=qopt]"); for (var k = 0; k < inputs.length; k++) { inputs[k].checked = false; } }
+  document.getElementById("fbbox").style.display = "none";
+  var opts = document.querySelectorAll(".opt"); for (var m = 0; m < opts.length; m++) { opts[m].classList.remove("c-opt","w-opt"); }
+  var yn = document.querySelectorAll(".yn-btn"); for (var n = 0; n < yn.length; n++) { yn[n].classList.remove("yc","yw"); }
+  answered = false;
+}
+
+function go(idx) { if (idx < 0) idx = 0; if (idx >= fQ.length) idx = fQ.length - 1; cur = idx; render(); }
+
+function updateSbar() {
+  var done = Object.keys(examAns).length; var ok = 0;
+  for (var k in examAns) { if (examAns[k].ok) ok++; }
+  document.getElementById("slive").textContent = ok + "/" + done;
+  document.getElementById("sleft").textContent = fQ.length - done;
+}
+
+function showResults() {
+  document.getElementById("qarea").style.display = "none";
+  document.getElementById("navBar").style.display = "none";
+  document.getElementById("fbar").style.display = "none";
+  document.getElementById("sbar").style.display = "none";
+  document.getElementById("results").style.display = "block";
+  var total = fQ.length; var ok = 0; var wrong = 0;
+  for (var k in examAns) { if (examAns[k].ok) ok++; else wrong++; }
+  var skip = total - Object.keys(examAns).length;
+  var pct = Math.round(ok / total * 100);
+  document.getElementById("rcnt").textContent = ok;
+  document.getElementById("rwrong").textContent = wrong;
+  document.getElementById("rskip").textContent = skip;
+  document.getElementById("pct").textContent = pct + "%";
+  var col = pct >= 70 ? "#1e8f4b" : "#c7433a";
+  document.getElementById("pct").style.color = col;
+  document.getElementById("scc").style.background = "conic-gradient(" + col + " " + pct + "%,#e0eaf3 " + pct + "%)";
+}
+
+function retake() {
+  examAns = {}; cur = 0;
+  document.getElementById("results").style.display = "none";
+  document.getElementById("qarea").style.display = "block";
+  document.getElementById("navBar").style.display = "flex";
+  document.getElementById("fbar").style.display = "flex";
+  if (examMode) document.getElementById("sbar").style.display = "block";
+  document.getElementById("revSection").innerHTML = "";
+  buildJumps(); render(); updateSbar();
+}
+
+function doReview() {
+  var sec = document.getElementById("revSection"); sec.innerHTML = "";
+  var h3 = document.createElement("h3");
+  h3.style.cssText = "margin:14px 0 9px;color:#0a2844;text-align:left;";
+  h3.textContent = "Answer Review"; sec.appendChild(h3);
+  for (var i = 0; i < fQ.length; i++) {
+    var q = fQ[i]; var ans = examAns[q.id]; var ok = ans ? ans.ok : false;
+    var item = document.createElement("div"); item.className = "ri";
+    var hdr = document.createElement("div"); hdr.className = "rih";
+    var numSpan = document.createElement("span"); numSpan.className = "rin"; numSpan.textContent = "Q" + q.id;
+    var shortSpan = document.createElement("span"); shortSpan.className = "riq-short"; shortSpan.textContent = q.q.substring(0, 60) + "...";
+    var statusSpan = document.createElement("span");
+    statusSpan.className = "ris " + (ans ? (ok ? "c" : "w") : "");
+    statusSpan.textContent = ans ? (ok ? "Correct" : "Wrong") : "Skipped";
+    hdr.appendChild(numSpan); hdr.appendChild(shortSpan); hdr.appendChild(statusSpan);
+    var body = document.createElement("div"); body.className = "rib";
+    var qDiv = document.createElement("div"); qDiv.className = "riq"; qDiv.textContent = q.q; body.appendChild(qDiv);
+    var corrA = "";
+    if (q.t === "yn") { var parts = []; for (var j = 0; j < q.y.length; j++) { parts.push((j+1)+":"+q.y[j].c); } corrA = parts.join(" | "); }
+    else { corrA = q.c; }
+    if (ans && !ok) {
+      var yourDiv = document.createElement("div"); yourDiv.className = "riy";
+      var yourA = "";
+      if (q.t === "yn") { var yp = []; for (var k2 = 0; k2 < ans.sel.length; k2++) { yp.push((k2+1)+":"+(ans.sel[k2]||"?")); } yourA = yp.join(" | "); }
+      else { yourA = ans.sel.join(", "); }
+      yourDiv.textContent = "Your answer: " + yourA; body.appendChild(yourDiv);
+    }
+    var corrDiv = document.createElement("div"); corrDiv.className = "ric"; corrDiv.textContent = "Correct: " + corrA; body.appendChild(corrDiv);
+    var expDiv = document.createElement("div"); expDiv.className = "rie";
+    var strong = document.createElement("strong"); strong.textContent = "Explanation: ";
+    expDiv.appendChild(strong); expDiv.appendChild(document.createTextNode(q.e)); body.appendChild(expDiv);
+    (function(h, b) { h.addEventListener("click", function() { b.style.display = b.style.display === "block" ? "none" : "block"; }); })(hdr, body);
+    item.appendChild(hdr); item.appendChild(body); sec.appendChild(item);
+  }
+}
+
+buildJumps();
+render();
+</script>
+</body>
+</html>
